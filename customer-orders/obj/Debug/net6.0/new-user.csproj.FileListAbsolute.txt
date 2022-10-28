@@ -1,0 +1,15 @@
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/bin/Debug/net6.0/new-user
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/bin/Debug/net6.0/new-user.deps.json
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/bin/Debug/net6.0/new-user.runtimeconfig.json
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/bin/Debug/net6.0/new-user.dll
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/bin/Debug/net6.0/new-user.pdb
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/new-user.csproj.AssemblyReference.cache
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/new-user.GeneratedMSBuildEditorConfig.editorconfig
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/new-user.AssemblyInfoInputs.cache
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/new-user.AssemblyInfo.cs
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/new-user.csproj.CoreCompileInputs.cache
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/new-user.dll
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/refint/new-user.dll
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/new-user.pdb
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/new-user.genruntimeconfig.cache
+/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/Debug/net6.0/ref/new-user.dll

@@ -24,25 +24,25 @@ namespace NewUserApp {
 
         // Instance methods, belongs to objects
         public void PrintMessage() {
-            Console.WriteLine($"Name: {name}, ID: {id}");
+            Console.WriteLine($"Name: {name}, ID: {id} \n");
         }
 
-        public void revokeAdmin() {
+        public void RevokeAdmin() {
         	this.isAdmin = false;
-            Console.WriteLine("Admin privileges removed");
+            Console.WriteLine($"Admin privileges removed for {this.name} \n");
         }
 
-        public void addPayRaise() {
-        	Console.WriteLine($"Current pay per hour: {pay}");
+        public void AddPayRaise() {
+        	Console.WriteLine($"Current pay per hour for {name}: {pay}");
             LoadingMessage();
-            Console.WriteLine("Pay increase added");
-            Console.WriteLine($"New pay per hour: {this.pay + Admin.payIncrease}");
+            Console.WriteLine($"Pay increase added for {this.name}");
+            Console.WriteLine($"New pay per hour for {this.name}: {this.pay + Admin.payIncrease} \n");
         }
 
 
         // Static methods - belongs to the class itself
         public static void LoadingMessage() {
-            Console.WriteLine("One moment...");
+            Console.WriteLine("One moment...\n");
         }
 
     }

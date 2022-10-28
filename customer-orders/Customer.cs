@@ -25,13 +25,13 @@ namespace NewUserApp {
             LoadingMessage();
             Console.WriteLine(name);
             Console.WriteLine($"Shipping to: {destination}");
-            Console.WriteLine($"Order Total: {totalPaid}");
-            Console.WriteLine($"Order number: {orderId}");
+            Console.WriteLine($"Order Total: ${totalPaid}");
+            Console.WriteLine($"Order number: {orderId} \n");
         }
 
         // Static methods - belong to class
         public static void LoadingMessage() {
-            Console.WriteLine("One moment...");
+            Console.WriteLine("Order Details: \n");
         }
 
     }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/briannarene/_rev-training/basic-program/basic-program.csproj",
-      "projectName": "basic-program",
-      "projectPath": "/Users/briannarene/_rev-training/basic-program/basic-program.csproj",
+      "projectUniqueName": "/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/new-user.csproj",
+      "projectName": "new-user",
+      "projectPath": "/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/new-user.csproj",
       "packagesPath": "/Users/briannarene/.nuget/packages/",
-      "outputPath": "/Users/briannarene/_rev-training/basic-program/obj/",
+      "outputPath": "/Users/briannarene/_rev-training/batch-repos/BriannaR/customer-orders/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/briannarene/.nuget/NuGet/NuGet.Config"

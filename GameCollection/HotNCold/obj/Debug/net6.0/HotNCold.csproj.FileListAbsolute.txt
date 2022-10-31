@@ -1,0 +1,15 @@
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/HotNCold.csproj.AssemblyReference.cache
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/HotNCold.GeneratedMSBuildEditorConfig.editorconfig
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/HotNCold.AssemblyInfoInputs.cache
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/HotNCold.AssemblyInfo.cs
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/HotNCold.csproj.CoreCompileInputs.cache
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/bin/Debug/net6.0/HotNCold
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/bin/Debug/net6.0/HotNCold.deps.json
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/bin/Debug/net6.0/HotNCold.runtimeconfig.json
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/bin/Debug/net6.0/HotNCold.dll
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/bin/Debug/net6.0/HotNCold.pdb
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/HotNCold.dll
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/refint/HotNCold.dll
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/HotNCold.pdb
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/HotNCold.genruntimeconfig.cache
+/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/Debug/net6.0/ref/HotNCold.dll

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/GameCollection.csproj",
-      "projectName": "GameCollection",
-      "projectPath": "/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/GameCollection.csproj",
+      "projectUniqueName": "/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/HotNCold.csproj",
+      "projectName": "HotNCold",
+      "projectPath": "/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/HotNCold.csproj",
       "packagesPath": "/Users/briannarene/.nuget/packages/",
-      "outputPath": "/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/obj/",
+      "outputPath": "/Users/briannarene/_rev-training/batch-repos/BriannaR/GameCollection/HotNCold/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/briannarene/.nuget/NuGet/NuGet.Config"

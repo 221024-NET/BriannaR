@@ -1,7 +1,6 @@
 ﻿using System;
 
-namespace Program {
-
+namespace HotOrCold {
     class Program {
         public static void Main(String[] args) {
             Console.WriteLine("Number Guesser started: ");

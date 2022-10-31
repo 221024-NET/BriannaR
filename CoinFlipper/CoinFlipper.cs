@@ -1,77 +1,61 @@
 using System;
 
 // Test Comment
-public class Program
-{	public int test = 0;
+public class Program {
+    public int test = 0;
 
-	public static void Main()
-	{
-		bool loop = true;
-		while(loop)
-		{
-			CoinFlipper();
+    public static void Main() {
+        bool loop = true;
+        while (loop) {
+            CoinFlipper();
 
-			Console.WriteLine("Play again?");
-			Console.WriteLine("Enter 'y' to play again, or press any other key to exit:");
-			string playerChoice = Console.ReadLine().ToUpper();
+            Console.WriteLine("Play again?");
+            Console.WriteLine("Enter 'y' to play again, or press any other key to exit:");
+            string playerChoice = Console.ReadLine().ToUpper();
 
-			bool playAgain = playerChoice.Equals("Y") ? loop = true : loop = false;
+            bool playAgain = playerChoice.Equals("Y") ? loop = true : loop = false;
 
-		}
-	}
+        }
+    }
 
-	public static void CoinFlipper() {
-		Console.WriteLine("Starting Coin Flipper:");
+    public static void CoinFlipper() {
+        Console.WriteLine("Starting Coin Flipper:");
 
-		Console.WriteLine("Enter the number of coins to flip: ");
+        Console.WriteLine("Enter the number of coins to flip: ");
 
-		string UserNumber = Console.ReadLine();
-		int Num = 0;
+        string UserNumber = Console.ReadLine();
+        int Num = 0;
 
-		try
-		{
-			Num = Int32.Parse(UserNumber);
-			if ( Num <= 0 )
-			{
-				throw new Exception("Argument may not be negative");
-			}
-		}
-		catch( InvalidOperationException e )
-		{
-			Console.WriteLine("A less specific catch: " + e.Message);
-		}
-		catch( ArgumentException e)
-		{
-			Console.WriteLine(e.Message);
-		}
-		catch( Exception e )
-		{
-			Console.WriteLine("The least specific catch: " + e.Message);
-		}
+        try {
+            Num = Int32.Parse(UserNumber);
+            if (Num <= 0) {
+                throw new Exception("Argument may not be negative");
+            }
+        } catch (InvalidOperationException e) {
+            Console.WriteLine("A less specific catch: " + e.Message);
+        } catch (ArgumentException e) {
+            Console.WriteLine(e.Message);
+        } catch (Exception e) {
+            Console.WriteLine("The least specific catch: " + e.Message);
+        }
 
-		Flip(Num);
-	}
+        Flip(Num);
+    }
 
-	public static void Flip(int Num)
-	{
-		var rand = new Random();
+    public static void Flip(int Num) {
+        var rand = new Random();
 
-		for (int i = 0; i < Num; i++)
-		{
-			int coin = rand.Next(2);
-			HoT(coin);
-		}
-	}
+        for (int i = 0; i < Num; i++) {
+            int coin = rand.Next(2);
+            HoT(coin);
+        }
+    }
 
-	public static void HoT(int coin)
-	{
-		if (coin == 0)
-		{
-			Console.WriteLine("Heads");
-		}
-		else
-		{
-			Console.WriteLine("Tails");
-		}
-	}
+    public static void HoT(int coin) {
+        if (coin == 0) {
+            Console.WriteLine("Heads");
+        } else {
+            Console.WriteLine("Tails");
+        }
+    }
 }

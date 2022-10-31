@@ -35,7 +35,7 @@ namespace HotNCold {
             } else if (secretNum > userNum) { // if user guesses low
                 return "Oops, you've guessed too low!";
             } else if (secretNum < userNum) { // if user guesses too high
-                return "Oops, too high!";
+                return "Oops, you've guessed too high!";
             }
             return "Game over!";
 

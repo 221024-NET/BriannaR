@@ -33,7 +33,22 @@ public class UnitTest1 {
         Guessing tmp = new Guessing();
         int secret = 5;
         int user = 6;
-        string expected = "Oops, too high!";
+        string expected = "Oops, you've guessed too high!";
+
+        // Act
+        string result = tmp.PrintResult(secret, user);
+
+        // Assert
+        Assert.Equal(expected: expected, actual: result);
+    }
+    // FINISH TEST 3
+    [Fact]
+    public void PrintResult_TooLow_TellTooLow() {
+        // Arrange
+        Guessing tmp = new Guessing();
+        int secret = 5;
+        int user = 4;
+        string expected = "Oops, you've guessed too low!";
 
         // Act
         string result = tmp.PrintResult(secret, user);

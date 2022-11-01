@@ -12,11 +12,11 @@ namespace RPSGame {
             return compChoice;
         }
 
-        public int getUserChoice() {
+        public int getUserNum() {
             Console.WriteLine("Choose 1: rock, 2: paper, or 3: scissors: ");
             string userString = Console.ReadLine();
-            int userChoice = inputValidation(userString);
-            return userChoice;
+            int userNum = inputValidation(userString);
+            return userNum;
         }
 
         public int inputValidation(string userString) {
@@ -30,18 +30,38 @@ namespace RPSGame {
             return userChoice;
         }
 
+        public string getChoice(int compChoice, int userNum) {
+            // Options:  1 - Rock, 2 - Paper, 3 - Scissors
+            // TODO: should return string option:
+            // Compare each number to options
+            // change result to string and return
+            // return string to pass to PrintResult
+            // TODO: If choice == 1, choice = "rock", etc
+
+            // Console.WriteLine($"You chose {userChoice}");
+
+        }
+
         public string getResult(int compChoice, int userChoice) {
             // Options:  1 - Rock, 2 - Paper, 3 - Scissors
+            // TODO: If choice == 1, choice = "rock", etc
+            string result = "";
             if (compChoice == userChoice) {
                 // both are right
-                return $"A draw! Both chose {userChoice}";
+                result = $"A draw! Both chose {userChoice}";
             } else if ((compChoice == 1 && userChoice == 3) || (compChoice == 2 && userChoice == 1) || (compChoice == 3 && userChoice == 2)) {
                 // Comp wins
-                return $"You lost! {compChoice} beats {userChoice}";
+                result = $"You lost! {compChoice} beats {userChoice}";
             } else {
                 // User Wins
-                return $"You win! {userChoice} beats {compChoice}";
+                result = $"You win! {userChoice} beats {compChoice}";
             }
+            return result;
+        }
+
+        public void printResult() {
+            // TODO: Get str from getChoice()
+            Console.WriteLine("");
         }
 
         public void playAgainMessage() {

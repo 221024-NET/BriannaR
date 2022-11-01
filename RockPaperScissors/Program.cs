@@ -13,11 +13,12 @@ namespace RPSGame {
             var userChoice = play.getUserChoice();
 
             // Get Result
+            Console.WriteLine($"The computer chose {compChoice}");
             string result = play.getResult(compChoice, userChoice);
 
             Console.WriteLine("Game over!");
 
-            // Add playAgainMessage();
+            // TODO: Add playAgainMessage();
 
         }
     }

@@ -1,13 +1,12 @@
 using System;
 
 namespace RPSGame {
-
     public class Game {
 
         public Game() { }
 
         public int getCompChoice() {
-            var rand = new Random(4);
+            var rand = new Random();
             int compChoice = rand.Next(1, 4);
             return compChoice;
         }
@@ -30,7 +29,7 @@ namespace RPSGame {
             return userChoice;
         }
 
-        // TODO: TEST FIRST
+        // Convert both choices to option str
         public string getOption(int givenChoice) {
             // Should take int and return str choice from dict
             Dictionary<int, string> options = new Dictionary<int, string> {
@@ -42,11 +41,34 @@ namespace RPSGame {
             return options[matchKey];
         }
 
-        // TODO: getResult()
+        // Returns game result
+        public string getResult(string compOption, string userOption) {
+            string result;
 
-        // ? printResult()
+            if ((compOption == "rock") && (userOption == "scissors")) {
+                result = "You lost...rock beats scissors!";
+            } else if ((compOption == "paper") && (userOption == "rock")) {
+                result = "You lost...paper beats rock!";
+            } else if ((compOption == "scissors") && (userOption == "paper")) {
+                result = "You lost...scissors beats paper!";
+            } else if ((userOption == "rock") && (compOption == "scissors")) {
+                result = "You win! Rock beats scissors!";
+            } else if ((userOption == "paper") && (compOption == "rock")) {
+                result = "You win! Paper beats rock!";
+            } else if ((compOption == "scissors") && (userOption == "paper")) {
+                result = "You win! Scissors beats paper!";
+            } else if (compOption == userOption) {
+                result = "It's a draw!";
+            } else {
+                result = $"You win! Game over";
+            }
+
+            return result;
+        }
 
         // TODO: playAgainPrompt()
+        public void playAgainPrompt() { }
+
 
     }
 

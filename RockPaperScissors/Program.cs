@@ -5,20 +5,25 @@ namespace RPSGame {
     class Program {
         public static void Main(String[] args) {
             Game play = new Game();
+            // TODO: Loop start for playAgain()
 
             // Get computer choice
             int compChoice = play.getCompChoice();
 
-            // Get user choice
-            var userChoice = play.getUserChoice();
+            // Get user Input
+            int userChoice = play.getUserChoice();
+
+            // Convert both choices to option str
+            string compOption = play.getOption(compChoice);
+            string userOption = play.getOption(userChoice);
+            Console.WriteLine($"You threw {userOption}...");
+            Console.WriteLine($"The computer threw {compOption}!");
 
             // Get Result
-            Console.WriteLine($"The computer chose {compChoice}");
-            string result = play.getResult(compChoice, userChoice);
+            play.getResult(compOption, userOption);
 
-            Console.WriteLine("Game over!");
 
-            // TODO: Add playAgainMessage();
+            // TODO: Add playAgainMessage() for draw and end;
 
         }
     }

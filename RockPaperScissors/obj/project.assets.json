@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/briannarene/_rev-training/batch-repos/BriannaR/RockPaperScissors/RockPaperScissors.csproj",
+      "projectUniqueName": "/Users/briannarene/_rev-training/BriannaR/RockPaperScissors/RockPaperScissors.csproj",
       "projectName": "RockPaperScissors",
-      "projectPath": "/Users/briannarene/_rev-training/batch-repos/BriannaR/RockPaperScissors/RockPaperScissors.csproj",
+      "projectPath": "/Users/briannarene/_rev-training/BriannaR/RockPaperScissors/RockPaperScissors.csproj",
       "packagesPath": "/Users/briannarene/.nuget/packages/",
-      "outputPath": "/Users/briannarene/_rev-training/batch-repos/BriannaR/RockPaperScissors/obj/",
+      "outputPath": "/Users/briannarene/_rev-training/BriannaR/RockPaperScissors/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/briannarene/.nuget/NuGet/NuGet.Config"

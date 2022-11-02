@@ -3,7 +3,7 @@ using System;
 namespace RPSGame {
 
     public class Game {
-        // Options:  1 - Rock, 2 - Paper, 3 - Scissors
+
         public Game() { }
 
         public int getCompChoice() {
@@ -12,16 +12,16 @@ namespace RPSGame {
             return compChoice;
         }
 
-        public int getUserNum() {
+        public int getUserChoice() {
             Console.WriteLine("Choose 1: rock, 2: paper, or 3: scissors: ");
-            string userString = Console.ReadLine();
-            int userNum = inputValidation(userString);
-            return userNum;
+            string userInput = Console.ReadLine();
+            int userChoice = inputValidation(userInput);
+            return userChoice;
         }
 
         public int inputValidation(string userString) {
             int userChoice = -1;
-            // Input validation
+
             while (!Int32.TryParse(userString, out userChoice)) {
                 Console.WriteLine("Error! Please enter a number.");
                 Console.WriteLine("Choose 1: rock, 2: paper, or 3: scissors: ");
@@ -30,49 +30,24 @@ namespace RPSGame {
             return userChoice;
         }
 
-        public string getChoice(int compChoice, int userNum) {
-            // Options:  1 - Rock, 2 - Paper, 3 - Scissors
-            // TODO: should return string option:
-            // Compare each number to options
-            // change result to string and return
-            // return string to pass to PrintResult
-            // TODO: If choice == 1, choice = "rock", etc
-
-            // Console.WriteLine($"You chose {userChoice}");
-
+        // TODO: TEST FIRST
+        public string getOption(int givenChoice) {
+            // Should take int and return str choice from dict
+            Dictionary<int, string> options = new Dictionary<int, string> {
+                {1, "rock"},
+                {2, "paper"},
+                {3, "scissors"}
+            };
+            int matchKey = givenChoice;
+            return options[matchKey];
         }
 
-        public string getResult(int compChoice, int userChoice) {
-            // Options:  1 - Rock, 2 - Paper, 3 - Scissors
-            // TODO: If choice == 1, choice = "rock", etc
-            string result = "";
-            if (compChoice == userChoice) {
-                // both are right
-                result = $"A draw! Both chose {userChoice}";
-            } else if ((compChoice == 1 && userChoice == 3) || (compChoice == 2 && userChoice == 1) || (compChoice == 3 && userChoice == 2)) {
-                // Comp wins
-                result = $"You lost! {compChoice} beats {userChoice}";
-            } else {
-                // User Wins
-                result = $"You win! {userChoice} beats {compChoice}";
-            }
-            return result;
-        }
+        // TODO: getResult()
 
-        public void printResult() {
-            // TODO: Get str from getChoice()
-            Console.WriteLine("");
-        }
+        // ? printResult()
 
-        public void playAgainMessage() {
-            Console.WriteLine("Play again? y/n: ");
-            // while True:
-            // game = new_game.Game()
-            // game.print_result()
-            // prompt "Do you want to play again? (y/n):"
-            // if user enters n, game ends
-            // if user enters y, repeat:
-        }
+        // TODO: playAgainPrompt()
+
     }
 
 

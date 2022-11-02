@@ -5,7 +5,7 @@ namespace CollectionsApp {
 
 
         public Lists() {
-            for(int i = 0; i < this.bigList.count; i++) {
+            for (int i = 0; i < this.bigList.Count; i++) {
                 bigList.Insert(i, i * 5);
             }
         }

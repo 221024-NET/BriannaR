@@ -44,8 +44,7 @@ namespace RPSGame {
         // Returns game result
         public string getResult(string compOption, string userOption) {
             string result;
-            Console.WriteLine($"You threw {userOption}...");
-            Console.WriteLine($"The computer threw {compOption}!");
+            Console.WriteLine($"You threw {userOption}...\n");
 
             if ((compOption == "rock") && (userOption == "scissors")) {
                 result = "You lost...rock beats scissors!";
@@ -66,20 +65,20 @@ namespace RPSGame {
                 result = "You win! Scissors beats paper!";
 
             } else if (compOption == userOption) {
-                result = $"The computer threw {compOption}. It's a draw!";
+                result = "It's a draw!";
 
             } else {
                 return "Something went wrong.";
             }
+            Console.WriteLine($"The computer threw {compOption}!");
             return result;
 
         }
 
-        // TODO: playAgainPrompt()
-        public void playAgainPrompt() { }
+        // TODO: Add loop for draw
+        // TODO: Refactor options and results to enum
+
 
 
     }
-
-
 }

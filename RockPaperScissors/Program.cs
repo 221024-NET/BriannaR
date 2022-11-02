@@ -16,12 +16,10 @@ namespace RPSGame {
             // Convert both choices to option str
             string compOption = play.getOption(compChoice);
             string userOption = play.getOption(userChoice);
-            Console.WriteLine($"You threw {userOption}...");
-            Console.WriteLine($"The computer threw {compOption}!");
 
             // Get Result
-            play.getResult(compOption, userOption);
-
+            string result = play.getResult(compOption, userOption);
+            Console.WriteLine(result);
 
             // TODO: Add playAgainMessage() for draw and end;
 

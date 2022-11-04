@@ -13,6 +13,7 @@ namespace Wordle {
         public int losses { get; set; }
         public double averageTurns { get; set; }
         public int[] turns { get; set; } // turns to win by index
+        public XmlSerializer Serializer { get; } = new XmlSerializer(typeof(List<User>));
 
         // Constructors
         public User() { }
@@ -56,9 +57,9 @@ namespace Wordle {
             return sum / count;
         }
 
-        public string DisplayRecord(string path, List<User> records) {
+        //  Add new record entry
+        public string AddRecord(string path, List<User> records) {
             StringBuilder result = new StringBuilder();
-
             result.AppendLine("Player \t\t Wins \t\t Losses \t\t Average turns to win");
             foreach (User record in records) {
                 result.AppendLine($"{record.userName} \t{record.wins}\t\t {record.losses}\t\t {record.averageTurns}");
@@ -66,11 +67,20 @@ namespace Wordle {
             return result.ToString();
         }
 
-        public void SerializeAsXml(List<User> records) {
+        // TODO: Update existing record entry (NOT XML)
+        public string UpdateRecord(string path, List<User> records) {
+            StringBuilder result = new StringBuilder();
+            // Replace (string oldValue, string? newValue, int startIndex, int count);
+            // * Use validation logic BUT ON LIST
 
+
+            return result.ToString();
+        }
+
+        // XML HANDLERS
+        public void SerializeAsXml(List<User> records) {
             var newStringWriter = new StringWriter();
             Serializer.Serialize(newStringWriter, records);
-
             File.WriteAllText("./xml", newStringWriter.ToString());
 
             newStringWriter.Close();
@@ -83,9 +93,14 @@ namespace Wordle {
             return records;
         }
 
+        // USER VALIDATION
         public static bool ExistingUser(string userName, string password) {
             XmlDocument doc = new XmlDocument();
-            doc.Load("./xml");
+            try {
+                doc.Load("./xml");
+            } catch (Exception e) {
+                Console.WriteLine(e);
+            }
             bool exists = false;
 
             // Make sure xml file has content
@@ -109,5 +124,6 @@ namespace Wordle {
             }
             return exists;
         }
+
     }
 }

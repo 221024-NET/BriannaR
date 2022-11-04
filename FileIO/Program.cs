@@ -14,24 +14,25 @@
 
             ConsoleColor[] feedback = { ConsoleColor.Gray, ConsoleColor.Gray, ConsoleColor.Gray, ConsoleColor.Gray, ConsoleColor.Gray };
 
-            // ask for user info
+            // Handle user info
             Console.WriteLine("Please enter your username:");
             string userName = Console.ReadLine();
 
             Console.WriteLine("Please enter your password:");
             string password = Console.ReadLine();
 
-            // if userName and passWord DON'T exist in xml, make new user
-            bool existingUser = User.ExistingUser(userName, password);
-
-
-
-            if (!existingUser) { }
+            // check if user info exists in xml
+            // bool existingUser = User.ExistingUser(userName, password);
 
             User player = new User(userName, password);
 
-
             List<User> records = player.ReadFromXml();
+
+            // foreach (User userRecord in records) {
+            //     Console.WriteLine(userRecord.userName);
+
+            // }
+
 
             bool loop = true;
 
@@ -101,14 +102,23 @@
                 if (choice.ToUpper() != "Y")
                     loop = false;
 
-            } while (loop);
+            } while (loop); // end game loop here
 
-            // end loop here______________________________________
-            // display player history
+            // update player history
+            // if the user doesn't exist, add a new user record
 
+            // if the user does exist, update existing entries in List records
+
+            // if (!existingUser) {
+            //     User newPlayer = new User(userName, password);
+            //     player.AddRecord(playerHistory, records);
+            //     records.Add(player);
+            // } else {
+            //     // TODO: UpdateRecord()
+
+            // }
 
             player.SerializeAsXml(records);
-            Console.WriteLine(player.DisplayRecord(playerHistory, records));
 
         }
 

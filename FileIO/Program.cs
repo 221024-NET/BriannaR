@@ -1,56 +1,59 @@
-﻿using System;
-using System.Text;
-
-namespace Wordle {
-
+﻿namespace Wordle {
     public class Program {
-
         public static void Main(string[] args) {
             string fpath = "./testFile.txt";
-            string gameHistory = "./.playerHistory";
+            string playerHistory = "./.history";
 
             string[] words = File.ReadAllLines(fpath);
+
             var rand = new Random();
 
             bool solved = false;
-            int turns;
+            int turns = 0;
             string guess;
 
-            //potential array of past guesses to be shown on every turn's end
-
-            //ColorString[] guesses = new ColorString[6];
             ConsoleColor[] feedback = { ConsoleColor.Gray, ConsoleColor.Gray, ConsoleColor.Gray, ConsoleColor.Gray, ConsoleColor.Gray };
 
-            // Create new user
-            Console.WriteLine("Please enter a username: ");
-            string newUsername = Console.ReadLine();
-            Console.WriteLine("Please enter a password: ");
-            string newPassword = Console.ReadLine();
+            // ask for user info
+            Console.WriteLine("Please enter your username:");
+            string userName = Console.ReadLine();
 
-            User player = new User(newUsername, newPassword);
+            Console.WriteLine("Please enter your password:");
+            string password = Console.ReadLine();
+
+            // if userName and passWord DON'T exist in xml, make new user
+            bool existingUser = User.ExistingUser(userName, password);
+
+
+
+            if (!existingUser) { }
+
+            User player = new User(userName, password);
+
+
+            List<User> records = player.ReadFromXml();
 
             bool loop = true;
 
-            // * START GAME LOOP
-            do {
+            do //game loop
+            {
                 turns = 0;
-                string secret = words[rand.Next(words.Length)].ToLower().Trim();
+                string secret = words[rand.Next(words.Length)].ToLower().Trim(); //random word from the list
 
-                // ! display secret word for testing
+                // display the secret word for testing
                 Console.WriteLine(secret);
 
-                // Game Loop
                 while (turns < 6) {
                     Console.WriteLine("Guess: ");
                     guess = Console.ReadLine().ToLower();
                     if (guess == null || guess.Length != 5) {
                         Console.WriteLine("Invalid guess. Must be a 5-letter word");
                         continue;
-                    }
-                    // guesses[turns].S=guess;
+                    }//end of if
+                    //guesses[turns].S=guess;
                     turns++;
 
-                    // wrong guess, give feedback
+                    //wrong guess, give feedback
                     for (int i = 0; i < 5; i++) {
                         //guessed letter in the right place
                         if (guess[i] == secret[i]) {
@@ -69,8 +72,7 @@ namespace Wordle {
                             //default color is gray so no need to set there
                             */
                         }
-                    }
-
+                    }//end of for
                     //print the colored guess
                     /*If ColorString works just use the given method instead*/
                     for (int i = 0; i < 5; i++) {
@@ -83,32 +85,30 @@ namespace Wordle {
                     if (guess == secret) {
                         solved = true;
                         break;
-                    }
+                    }//end of if
                 }//end of while
 
+                Console.Write(solved ? "Solved " : "Not solved ");
+                Console.WriteLine("within {0} turn(s). The word was: {1}", turns, secret);
 
-                Console.WriteLine(solved ? $"Solved in: {0} turn(s)" : "Not solved ");
-                Console.WriteLine("The word was: {1}", turns, secret);
-
-                // Update user info
-                // (win or loss boolean, # of turns int)
+                // update information about the user
+                // win/loss, number of turns
                 player.UpdateRecord(solved, turns);
 
-                Console.WriteLine("Play Again? (Y/N)");
+                Console.WriteLine("Play Again? (Y or N)");
                 string choice = Console.ReadLine();
 
-                if (choice.ToUpper() != "Y") {
+                if (choice.ToUpper() != "Y")
                     loop = false;
-                }
 
             } while (loop);
-            // * END GAME LOOP
 
-            // (Display player history info)
-            player.SaveHistory(gameHistory);
-            Console.WriteLine("Here are your current stats: ");
-            var playerRecord = player.DisplayRecord(gameHistory);
-            Console.WriteLine(playerRecord);
+            // end loop here______________________________________
+            // display player history
+
+
+            player.SerializeAsXml(records);
+            Console.WriteLine(player.DisplayRecord(playerHistory, records));
 
         }
 

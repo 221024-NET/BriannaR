@@ -1,17 +1,27 @@
 -- On the Chinook DB, practice writing queries with the following exercises
 
 -- List all customers (full name, customer id, and country) who are not in the USA
+SELECT * FROM dbo.Customer
+WHERE Country != 'USA';
 
 -- List all customers from Brazil
+SELECT * FROM Customer
+WHERE Country = 'Brazil';
 
 -- List all sales agents
+SELECT * FROM Employee
+WHERE Title = 'Sales Support Agent';
 
 -- Retrieve a list of all countries in billing addresses on invoices
+SELECT BillingCountry FROM Invoice;
 
 -- Retrieve how many invoices there were in 2009, and what was the sales total for that year?
     -- (challenge: find the invoice count sales total for every year using one query)
 
+-- WHERE DATEPART(year, Invoice) = 2009;
+
 -- how many line items were there for invoice #37
+
 
 -- how many invoices per country?
 

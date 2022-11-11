@@ -13,6 +13,7 @@ namespace Wordle {
         public int losses { get; set; }
         public double averageTurns { get; set; }
         public int[] turns { get; set; } // turns to win by index
+
         public XmlSerializer Serializer { get; } = new XmlSerializer(typeof(List<User>));
 
         // Constructors
@@ -78,6 +79,13 @@ namespace Wordle {
         }
 
         // XML HANDLERS
+        public List<User> ReadFromXml() {
+            StreamReader reader = new StreamReader("./xml");
+            var records = (List<User>?)Serializer.Deserialize(reader);
+            reader.Close();
+            return records;
+        }
+
         public void SerializeAsXml(List<User> records) {
             var newStringWriter = new StringWriter();
             Serializer.Serialize(newStringWriter, records);
@@ -86,12 +94,6 @@ namespace Wordle {
             newStringWriter.Close();
         }
 
-        public List<User> ReadFromXml() {
-            StreamReader reader = new StreamReader("./xml");
-            var records = (List<User>?)Serializer.Deserialize(reader);
-            reader.Close();
-            return records;
-        }
 
         // USER VALIDATION
         public static bool ExistingUser(string userName, string password) {

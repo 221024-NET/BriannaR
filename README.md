@@ -1,3 +1,1 @@
-# Batch 221024-NET
-
-[p1 Project](https://github.com/briannarenni/RequestHandler-221024)
+[P1 Project Repo](https://github.com/briannarenni/RequestHandler-221024)
